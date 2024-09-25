@@ -264,6 +264,21 @@
                     mtimes: audio.mtimes.slice(startIndex).map(time => time - audio.wtimes[startIndex])
                 };
             }
+            // Fetch transcript from the local path
+            async function loadTranscriptFile() {
+                try {
+                    const response = await fetch('./transcript/transcript.json');
+                    if (!response.ok) {
+                        throw new Error(`Failed to load transcript: ${response.statusText}`);
+                    }
+                    const data = await response.json();
+                    console.log('Transcript loaded:', data);
+                    return data;
+                } catch (error) {
+                    console.error('Error loading transcript:', error);
+                    return null;
+                }
+            }
     
         });
     </script>
