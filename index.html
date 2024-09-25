@@ -146,9 +146,6 @@
                         console.log("Audio object created from local JSON:", audio);
                     }
                 };
-
-                reader.readAsText(file);
-
             } catch (error) {
                 console.error("Error in loadAudioFromLocal:", error);
                 nodeJSON.value = 'Error: ' + error.message;
