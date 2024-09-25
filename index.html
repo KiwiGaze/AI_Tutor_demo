@@ -179,31 +179,40 @@
 
             const nodeAvatar = document.getElementById('avatar');
             head = new TalkingHead( nodeAvatar, {
-              ttsEndpoint: "https://eu-texttospeech.googleapis.com/v1beta1/text:synthesize",
-              lipsyncModules: ["en", "fi"],
-              cameraView: "mid",
-              cameraRotateEnable: false,
+                ttsEndpoint: "https://eu-texttospeech.googleapis.com/v1beta1/text:synthesize",
+                lipsyncModules: ["en", "fi"],
+                cameraView: "mid",
+                cameraRotateEnable: false,
             });
       
             // Load and show the avatar
             const nodeLoading = document.getElementById('loading');
             try {
-              await head.showAvatar( {
-                url: 'https://models.readyplayer.me/64bfa15f0e72c63d7c3934a6.glb?morphTargets=ARKit,Oculus+Visemes,mouthOpen,mouthSmile,eyesClosed,eyesLookUp,eyesLookDown&textureSizeLimit=1024&textureFormat=png',
-                body: 'F',
-                avatarMood: 'happy',
-                lipsyncLang: 'en'
-              }, (ev) => {
-                if ( ev.lengthComputable ) {
-                  let val = Math.min(100,Math.round(ev.loaded/ev.total * 100 ));
-                  nodeLoading.textContent = "Loading " + val + "%";
+                // Fetch the transcript JSON automatically when the head is loading
+                const transcript = await loadTranscriptFile();
+
+                // Process the transcript after loading it
+                if (transcript) {
+                    loadAudioFromJson(transcript);
                 }
-              });
-              nodeLoading.style.display = 'none';
-              video.controls = true;// Enable video controls
-            } catch (error) {
-              console.log(error);
-              nodeLoading.textContent = error.toString();
+
+
+                await head.showAvatar( {
+                    url: 'https://models.readyplayer.me/64bfa15f0e72c63d7c3934a6.glb?morphTargets=ARKit,Oculus+Visemes,mouthOpen,mouthSmile,eyesClosed,eyesLookUp,eyesLookDown&textureSizeLimit=1024&textureFormat=png',
+                    body: 'F',
+                    avatarMood: 'happy',
+                    lipsyncLang: 'en'
+                }, (ev) => {
+                    if ( ev.lengthComputable ) {
+                    let val = Math.min(100,Math.round(ev.loaded/ev.total * 100 ));
+                    nodeLoading.textContent = "Loading " + val + "%";
+                    }
+                });
+                nodeLoading.style.display = 'none';
+                video.controls = true;// Enable video controls
+            }catch (error) {
+                console.log(error);
+                nodeLoading.textContent = error.toString();
             }
 
             let lastPlayedTime = 0;
@@ -277,7 +286,7 @@
       <div id="controlsection" class="bg-gray-50 p-8 space-y-6">
         <div class="relative">
             <label for="load" class="block text-sm font-medium text-gray-700 mb-2">Upload Audio/Video</label>
-            <input id="load" type="file" accept=".m4a,.mp3,.webm,.mp4,.mpga,.wav,.mpeg,.json" class="hidden">
+            <input id="load" type="file" accept=".json" class="hidden">
             <label for="load" class="w-full flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-accent cursor-pointer transition duration-150 ease-in-out">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
                 <span id="fileLabel">Choose file</span>
