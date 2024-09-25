@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talking Head - MP3 Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        #avatar {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            #avatar {
+                display: none;
+            }
+        }
+
+        #video-section {
+            position: absolute;
+            top: 0;
+            left: 40%;
+            right: 0;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #controlsection {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            left: 40%;
+            height: 30%;
+            right: 0;
+            bottom: 0;
+            padding: 20px;
+            color: black;
+        }
+
+        #load {
+            font-family: Arial;
+            font-size: 20px;
+        }
+
+        #json {
+            flex: 1;
+            background-color: lightgray;
+            font-family: Arial;
+            font-size: 20px;
+        }
+
+        #loading {
+            display: block;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            font-family: Arial;
+            font-size: 20px;
+        }
+    </style>
+    <script type="importmap">
+    { "imports":
+      {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js/+esm",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/",
+        "talkinghead": "./js/talkinghead.mjs"
+      }
+    }
+    </script>
+    <script type="module">
+        import { TalkingHead } from "talkinghead";
+    
+        let head; // TalkingHead instance
+        let audio; // Audio object
+        let video; // Video element
+    
+        // New function to load audio from local JSON file
+        async function loadAudioFromLocal(file) {
+            try {
+                const nodeJSON = document.getElementById('json');
+                nodeJSON.value = "Please wait...";
+
+                const reader = new FileReader();
+                reader.onload = async (event) => {
+                    // Debugging
+                    const jsonString = event.target.result;
+                    console.log("Type of event result:", typeof jsonString);
+
+
+                    // Parse JSON
+                    const json = JSON.parse(jsonString);
+                    console.log("Type of JSON:", typeof json);
+
+                    nodeJSON.value = JSON.stringify(json, null, 4);
+
+                    // Debugging
+                    console.log("Words from JSON:", json.words);
+
+                    if (json.words && json.words.length) {
+                        // TalkingHead audio object
+                        audio = {
+                            audio: null, // We don't have audio buffer here
+                            words: [],
+                            wtimes: [],
+                            wdurations: [],
+                            markers: [],
+                            mtimes: []
+                        };
+
+                        // Add words to the audio object
+                        json.words.forEach(x => {
+                            audio.words.push(x.word);
+                            audio.wtimes.push(1000 * x.start - 150);
+                            audio.wdurations.push(1000 * (x.end - x.start));
+                        });
+
+                        // Callback function to make the avatar look at the camera
+                        const startSegment = async () => {
+                            head.lookAtCamera(500);
+                            head.speakWithHands();
+                        };
+
+                        // Add timed callback markers to the audio object
+                        json.segments.forEach(x => {
+                            if (x.start > 2 && x.text.length > 10) {
+                                audio.markers.push(startSegment);
+                                audio.mtimes.push(1000 * x.start - 1000);
+                            }
+                        });
+
+                        console.log("Audio object created from local JSON:", audio);
+                    }
+                };
+
+                reader.readAsText(file);
+
+            } catch (error) {
+                console.error("Error in loadAudioFromLocal:", error);
+                nodeJSON.value = 'Error: ' + error.message;
+            }
+      }
+
+        // File changed
+        const nodeLoad = document.getElementById('load');
+          nodeLoad.addEventListener('change', function(ev) {
+            let file = ev.target.files[0];
+            if (file.type === "application/json") {
+                loadAudioFromLocal(file);
+            } else {
+                loadAudio(file);
+            }
+        });
+    
+        document.addEventListener('DOMContentLoaded', async function(e) {
+            // Instantiate the class
+            // NOTE: Text-to-speech not initialized
+            const nodeAvatar = document.getElementById('avatar');
+            head = new TalkingHead( nodeAvatar, {
+              ttsEndpoint: "https://eu-texttospeech.googleapis.com/v1beta1/text:synthesize",
+              lipsyncModules: ["en", "fi"],
+              cameraView: "mid",
+              cameraRotateEnable: false,
+            });
+      
+            // Load and show the avatar
+            const nodeLoading = document.getElementById('loading');
+            try {
+              await head.showAvatar( {
+                url: 'https://models.readyplayer.me/64bfa15f0e72c63d7c3934a6.glb?morphTargets=ARKit,Oculus+Visemes,mouthOpen,mouthSmile,eyesClosed,eyesLookUp,eyesLookDown&textureSizeLimit=1024&textureFormat=png',
+                body: 'F',
+                avatarMood: 'happy',
+                lipsyncLang: 'en'
+              }, (ev) => {
+                if ( ev.lengthComputable ) {
+                  let val = Math.min(100,Math.round(ev.loaded/ev.total * 100 ));
+                  nodeLoading.textContent = "Loading " + val + "%";
+                }
+              });
+              nodeLoading.style.display = 'none';
+
+            } catch (error) {
+              console.log(error);
+              nodeLoading.textContent = error.toString();
+            }
+
+            let lastPlayedTime = 0;
+
+            // Initialize video element
+            video = document.getElementById('videoPlayer');
+
+            
+            video.addEventListener('seeking', function() {
+                head.stopSpeaking();
+                console.log("Video seeking");
+            });
+
+
+            video.addEventListener('seeked', function() {
+                  const seekTime = video.currentTime * 1000;
+                  const startIndex = findNearestWordIndex(seekTime);
+                  const segment = createAudioSegment(startIndex);
+                  head.speakWithoutAudio(segment);
+                  console.log("Video seeked to " + video.currentTime + "s, resuming lip sync");
+                  console.log("startIndex: " + startIndex);
+            });
+
+
+            
+            video.addEventListener('play', function() {
+              if (lastPlayedTime > 0) {
+                  head.resumeAll();
+                  console.log("Video and lip sync resumed");
+              } else {
+                  head.speakWithoutAudio(audio);
+                  console.log("Video played, starting lip sync");
+              }
+            });
+
+            video.addEventListener('pause', function() {
+                  head.pauseAll();
+                  console.log("Video paused");
+            });
+            video.addEventListener('timeupdate', function() {
+                lastPlayedTime = video.currentTime;
+            });
+            function findNearestWordIndex(seekTime) {
+                return audio.wtimes.findIndex(time => time >= seekTime);
+            }
+            function createAudioSegment(startIndex) {
+                return {
+                    words: audio.words.slice(startIndex),
+                    wtimes: audio.wtimes.slice(startIndex).map(time => time - audio.wtimes[startIndex]),
+                    wdurations: audio.wdurations.slice(startIndex),
+                    markers: audio.markers.slice(startIndex),
+                    mtimes: audio.mtimes.slice(startIndex).map(time => time - audio.wtimes[startIndex])
+                };
+            }
+    
+        });
+    </script>
+</head>
+<body class="min-h-screen bg-white flex flex-col items-center justify-center p-4">
+    <!-- Avatar Section -->
+    <div id="avatar" class="bg-gray-100">
+        <!-- Avatar content can go here -->
+    </div>
+
+    <div class="flex flex-col items-center justify-center space-y-4">
+      <!-- Video Section -->
+      <div id="video-section" class="bg-gray-200">
+          <video id="videoPlayer" class="h-full w-auto" controls controlsList="noplaybackrate nodownload" disablePictureInPicture>
+              <source src="./media/final_video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
+      <!-- Controls Section -->
+      <div id="controlsection" class="bg-gray-50 p-8 space-y-6">
+        <div class="relative">
+            <label for="load" class="block text-sm font-medium text-gray-700 mb-2">Upload Audio/Video</label>
+            <input id="load" type="file" accept=".m4a,.mp3,.webm,.mp4,.mpga,.wav,.mpeg,.json" class="hidden">
+            <label for="load" class="w-full flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom-accent cursor-pointer transition duration-150 ease-in-out">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                <span id="fileLabel">Choose file</span>
+            </label>
+        </div>
+        <div>
+            <label for="json" class="block text-sm font-medium text-gray-700 mb-2">JSON Output</label>
+            <textarea id="json" readonly class="w-full h-32 text-sm text-gray-500 border border-gray-300 rounded-md focus:ring-custom-accent focus:border-custom-accent p-3 resize-none bg-white shadow-inner"></textarea>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Loading Indicator -->
+    <div id="loading" class="mt-4 w-full max-w-md text-center text-sm text-gray-500">
+        <!-- Loading indicator can go here -->
+    </div>
+</body>
+</html>
