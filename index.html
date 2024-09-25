@@ -99,18 +99,14 @@
                 const nodeJSON = document.getElementById('json');
                 nodeJSON.value = "Please wait...";
 
-                const reader = new FileReader();
-                reader.onload = async (event) => {
-                    // Debugging
-                    const jsonString = event.target.result;
-                    console.log("Type of event result:", typeof jsonString);
+                const response = await fetch('./transcript/transcript.json')
+                if (response.ok) {
+                    const json = await response.json();
+                    nodeJSON.value = JSON.stringify(json, null, 4);
 
 
                     // Parse JSON
-                    const json = JSON.parse(jsonString);
                     console.log("Type of JSON:", typeof json);
-
-                    nodeJSON.value = JSON.stringify(json, null, 4);
 
                     // Debugging
                     console.log("Words from JSON:", json.words);
@@ -264,20 +260,6 @@
                     mtimes: audio.mtimes.slice(startIndex).map(time => time - audio.wtimes[startIndex])
                 };
             }
-            // Fetch transcript from the local path
-            async function loadTranscriptFile() {
-                try {
-                    const response = await fetch('./transcript/transcript.json');
-                    if (!response.ok) {
-                        throw new Error(`Failed to load transcript: ${response.statusText}`);
-                    }
-                    return response;
-                } catch (error) {
-                    console.error('Error loading transcript:', error);
-                    return null;
-                }
-            }
-    
         });
     </script>
 </head>
