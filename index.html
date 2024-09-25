@@ -171,8 +171,12 @@
         });
     
         document.addEventListener('DOMContentLoaded', async function(e) {
-            // Instantiate the class
-            // NOTE: Text-to-speech not initialized
+
+            // Initialize video element
+            // disable controls
+            video = document.getElementById('videoPlayer');
+            video.controls = false;
+
             const nodeAvatar = document.getElementById('avatar');
             head = new TalkingHead( nodeAvatar, {
               ttsEndpoint: "https://eu-texttospeech.googleapis.com/v1beta1/text:synthesize",
@@ -196,16 +200,13 @@
                 }
               });
               nodeLoading.style.display = 'none';
-
+              video.controls = true;// Enable video controls
             } catch (error) {
               console.log(error);
               nodeLoading.textContent = error.toString();
             }
 
             let lastPlayedTime = 0;
-
-            // Initialize video element
-            video = document.getElementById('videoPlayer');
 
             
             video.addEventListener('seeking', function() {
