@@ -1,0 +1,2149 @@
+{
+    "text": "Hello everyone and welcome to our course on User Requirements Analysis. I'm so glad to see you all here today as we embark on an exciting journey to explore the essential foundations of effective software engineering. In this course, we will delve into the critical aspects of understanding user requirements. We will uncover the different methods, particularly focusing on use cases and user stories, which are pivotal in identifying what users need to achieve with a system. These concepts will not only help you satisfy business requirements, but will also enhance the quality and user satisfaction of the software products you develop. Our primary learning objectives for today's lecture are threefold. First, we will learn how to define and articulate the crucial user needs that drive software requirements. Second, we will explore the practical techniques for capturing those needs through use cases and user stories. Finally, we will discuss how effective requirements gathering can lead to successful project outcomes and overall user satisfaction. One particularly interesting aspect we'll be addressing is how accurate and well-defined requirements can significantly reduce the risks of project failure. This course not only prepares you for your future engagements in software engineering, but also equips you with vital skills that are highly sought after in today's job market. Now as you engage with the material, I encourage you to think critically and ask questions. Your participation is instrumental in creating an enriching learning environment for everyone. To summarize, get ready to immerse yourself in the world of user needs and requirements. Let's inspire each other and pave the way for successful software solutions together. If you have any questions as we go along, don't hesitate to raise them. Let's get started.",
+    "task": "transcribe",
+    "language": "english",
+    "duration": 114.79000091552734,
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.440000057220459,
+            "text": " Hello everyone and welcome to our course on User Requirements Analysis.",
+            "tokens": [
+                50364,
+                2425,
+                1518,
+                293,
+                2928,
+                281,
+                527,
+                1164,
+                322,
+                32127,
+                42029,
+                621,
+                1117,
+                38172,
+                13,
+                50576
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2403343766927719,
+            "compression_ratio": 1.5836576223373413,
+            "no_speech_prob": 0.0006861944566480815
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 4.440000057220459,
+            "end": 11.239999771118164,
+            "text": " I'm so glad to see you all here today as we embark on an exciting journey to explore the",
+            "tokens": [
+                50576,
+                286,
+                478,
+                370,
+                5404,
+                281,
+                536,
+                291,
+                439,
+                510,
+                965,
+                382,
+                321,
+                29832,
+                322,
+                364,
+                4670,
+                4671,
+                281,
+                6839,
+                264,
+                50812
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2403343766927719,
+            "compression_ratio": 1.5836576223373413,
+            "no_speech_prob": 0.0006861944566480815
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 11.239999771118164,
+            "end": 15.039999961853027,
+            "text": " essential foundations of effective software engineering.",
+            "tokens": [
+                50812,
+                7115,
+                22467,
+                295,
+                4942,
+                4722,
+                7043,
+                13,
+                51042
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2403343766927719,
+            "compression_ratio": 1.5836576223373413,
+            "no_speech_prob": 0.0006861944566480815
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 15.039999961853027,
+            "end": 21.6200008392334,
+            "text": " In this course, we will delve into the critical aspects of understanding user requirements.",
+            "tokens": [
+                51042,
+                682,
+                341,
+                1164,
+                11,
+                321,
+                486,
+                43098,
+                666,
+                264,
+                4924,
+                7270,
+                295,
+                3701,
+                4195,
+                7728,
+                13,
+                51318
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2403343766927719,
+            "compression_ratio": 1.5836576223373413,
+            "no_speech_prob": 0.0006861944566480815
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 21.6200008392334,
+            "end": 25.520000457763672,
+            "text": " We will uncover the different methods, particularly focusing on use cases and user stories, which",
+            "tokens": [
+                51318,
+                492,
+                486,
+                21694,
+                264,
+                819,
+                7150,
+                11,
+                4098,
+                8416,
+                322,
+                764,
+                3331,
+                293,
+                4195,
+                3676,
+                11,
+                597,
+                51636
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2403343766927719,
+            "compression_ratio": 1.5836576223373413,
+            "no_speech_prob": 0.0006861944566480815
+        },
+        {
+            "id": 5,
+            "seek": 2552,
+            "start": 25.520000457763672,
+            "end": 31.420000076293945,
+            "text": " are pivotal in identifying what users need to achieve with a system.",
+            "tokens": [
+                50364,
+                366,
+                39078,
+                294,
+                16696,
+                437,
+                5022,
+                643,
+                281,
+                4584,
+                365,
+                257,
+                1185,
+                13,
+                50632
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2612847089767456,
+            "compression_ratio": 1.6135457754135132,
+            "no_speech_prob": 0.005217398516833782
+        },
+        {
+            "id": 6,
+            "seek": 2552,
+            "start": 31.420000076293945,
+            "end": 36.29999923706055,
+            "text": " These concepts will not only help you satisfy business requirements, but will also enhance",
+            "tokens": [
+                50632,
+                1981,
+                10392,
+                486,
+                406,
+                787,
+                854,
+                291,
+                19319,
+                1606,
+                7728,
+                11,
+                457,
+                486,
+                611,
+                11985,
+                50848
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2612847089767456,
+            "compression_ratio": 1.6135457754135132,
+            "no_speech_prob": 0.005217398516833782
+        },
+        {
+            "id": 7,
+            "seek": 2552,
+            "start": 36.29999923706055,
+            "end": 42.84000015258789,
+            "text": " the quality and user satisfaction of the software products you develop.",
+            "tokens": [
+                50848,
+                264,
+                3125,
+                293,
+                4195,
+                18715,
+                295,
+                264,
+                4722,
+                3383,
+                291,
+                1499,
+                13,
+                51140
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2612847089767456,
+            "compression_ratio": 1.6135457754135132,
+            "no_speech_prob": 0.005217398516833782
+        },
+        {
+            "id": 8,
+            "seek": 2552,
+            "start": 42.84000015258789,
+            "end": 46.47999954223633,
+            "text": " Our primary learning objectives for today's lecture are threefold.",
+            "tokens": [
+                51140,
+                2621,
+                6194,
+                2539,
+                15961,
+                337,
+                965,
+                311,
+                7991,
+                366,
+                1045,
+                18353,
+                13,
+                51308
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2612847089767456,
+            "compression_ratio": 1.6135457754135132,
+            "no_speech_prob": 0.005217398516833782
+        },
+        {
+            "id": 9,
+            "seek": 2552,
+            "start": 46.47999954223633,
+            "end": 49.97999954223633,
+            "text": " First, we will learn how to define and articulate the crucial user needs that drive software",
+            "tokens": [
+                51308,
+                2386,
+                11,
+                321,
+                486,
+                1466,
+                577,
+                281,
+                6964,
+                293,
+                30305,
+                264,
+                11462,
+                4195,
+                2203,
+                300,
+                3332,
+                4722,
+                51562
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2612847089767456,
+            "compression_ratio": 1.6135457754135132,
+            "no_speech_prob": 0.005217398516833782
+        },
+        {
+            "id": 10,
+            "seek": 2552,
+            "start": 49.47999954223633,
+            "end": 50.47999954223633,
+            "text": " requirements.",
+            "tokens": [
+                51562,
+                7728,
+                13,
+                51612
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2612847089767456,
+            "compression_ratio": 1.6135457754135132,
+            "no_speech_prob": 0.005217398516833782
+        },
+        {
+            "id": 11,
+            "seek": 4998,
+            "start": 50.599998474121094,
+            "end": 56.279998779296875,
+            "text": " Second, we will explore the practical techniques for capturing those needs through use cases",
+            "tokens": [
+                50414,
+                5736,
+                11,
+                321,
+                486,
+                6839,
+                264,
+                8496,
+                7512,
+                337,
+                23384,
+                729,
+                2203,
+                807,
+                764,
+                3331,
+                50656
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2662898898124695,
+            "compression_ratio": 1.6735395193099976,
+            "no_speech_prob": 0.004263993818312883
+        },
+        {
+            "id": 12,
+            "seek": 4998,
+            "start": 56.279998779296875,
+            "end": 58.97999954223633,
+            "text": " and user stories.",
+            "tokens": [
+                50656,
+                293,
+                4195,
+                3676,
+                13,
+                50736
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2662898898124695,
+            "compression_ratio": 1.6735395193099976,
+            "no_speech_prob": 0.004263993818312883
+        },
+        {
+            "id": 13,
+            "seek": 4998,
+            "start": 58.97999954223633,
+            "end": 66.4800033569336,
+            "text": " Finally, we will discuss how effective requirements gathering can lead to successful project outcomes",
+            "tokens": [
+                50736,
+                6288,
+                11,
+                321,
+                486,
+                2248,
+                577,
+                4942,
+                7728,
+                13519,
+                393,
+                1477,
+                281,
+                4406,
+                1716,
+                10070,
+                51022
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2662898898124695,
+            "compression_ratio": 1.6735395193099976,
+            "no_speech_prob": 0.004263993818312883
+        },
+        {
+            "id": 14,
+            "seek": 4998,
+            "start": 66.4800033569336,
+            "end": 68.73999786376953,
+            "text": " and overall user satisfaction.",
+            "tokens": [
+                51022,
+                293,
+                4787,
+                4195,
+                18715,
+                13,
+                51186
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2662898898124695,
+            "compression_ratio": 1.6735395193099976,
+            "no_speech_prob": 0.004263993818312883
+        },
+        {
+            "id": 15,
+            "seek": 4998,
+            "start": 68.73999786376953,
+            "end": 75.23999786376953,
+            "text": " One particularly interesting aspect we'll be addressing is how accurate and well-defined",
+            "tokens": [
+                51186,
+                1485,
+                4098,
+                1880,
+                4171,
+                321,
+                603,
+                312,
+                14329,
+                307,
+                577,
+                8559,
+                293,
+                731,
+                12,
+                37716,
+                51411
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2662898898124695,
+            "compression_ratio": 1.6735395193099976,
+            "no_speech_prob": 0.004263993818312883
+        },
+        {
+            "id": 16,
+            "seek": 4998,
+            "start": 75.36000061035156,
+            "end": 78.5,
+            "text": " requirements can significantly reduce the risks of project failure.",
+            "tokens": [
+                51411,
+                7728,
+                393,
+                10591,
+                5407,
+                264,
+                10888,
+                295,
+                1716,
+                7763,
+                13,
+                51640
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2662898898124695,
+            "compression_ratio": 1.6735395193099976,
+            "no_speech_prob": 0.004263993818312883
+        },
+        {
+            "id": 17,
+            "seek": 4998,
+            "start": 78.5,
+            "end": 78.94000244140625,
+            "text": " This course not only prepares you for your future engagements in software engineering,",
+            "tokens": [
+                51640,
+                639,
+                1164,
+                406,
+                787,
+                39418,
+                291,
+                337,
+                428,
+                2027,
+                44978,
+                294,
+                4722,
+                7043,
+                11,
+                51850
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2662898898124695,
+            "compression_ratio": 1.6735395193099976,
+            "no_speech_prob": 0.004263993818312883
+        },
+        {
+            "id": 18,
+            "seek": 7894,
+            "start": 79.05999755859375,
+            "end": 85.4800033569336,
+            "text": " but also equips you with vital skills that are highly sought after in today's job market.",
+            "tokens": [
+                50400,
+                457,
+                611,
+                1267,
+                2600,
+                291,
+                365,
+                11707,
+                3942,
+                300,
+                366,
+                5405,
+                17532,
+                934,
+                294,
+                965,
+                311,
+                1691,
+                2142,
+                13,
+                50672
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2348683625459671,
+            "compression_ratio": 1.582456111907959,
+            "no_speech_prob": 0.0009105968056246638
+        },
+        {
+            "id": 19,
+            "seek": 7894,
+            "start": 85.4800033569336,
+            "end": 92.87999725341797,
+            "text": " Now as you engage with the material, I encourage you to think critically and ask questions.",
+            "tokens": [
+                50672,
+                823,
+                382,
+                291,
+                4683,
+                365,
+                264,
+                2527,
+                11,
+                286,
+                5373,
+                291,
+                281,
+                519,
+                22797,
+                293,
+                1029,
+                1651,
+                13,
+                50974
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2348683625459671,
+            "compression_ratio": 1.582456111907959,
+            "no_speech_prob": 0.0009105968056246638
+        },
+        {
+            "id": 20,
+            "seek": 7894,
+            "start": 92.87999725341797,
+            "end": 99.54000091552734,
+            "text": " Your participation is instrumental in creating an enriching learning environment for everyone.",
+            "tokens": [
+                50974,
+                2260,
+                13487,
+                307,
+                17388,
+                294,
+                4084,
+                364,
+                18849,
+                278,
+                2539,
+                2823,
+                337,
+                1518,
+                13,
+                51280
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2348683625459671,
+            "compression_ratio": 1.582456111907959,
+            "no_speech_prob": 0.0009105968056246638
+        },
+        {
+            "id": 21,
+            "seek": 7894,
+            "start": 99.54000091552734,
+            "end": 104.31999969482422,
+            "text": " To summarize, get ready to immerse yourself in the world of user needs and requirements.",
+            "tokens": [
+                51280,
+                1407,
+                20858,
+                11,
+                483,
+                1919,
+                281,
+                5578,
+                405,
+                1803,
+                294,
+                264,
+                1002,
+                295,
+                4195,
+                2203,
+                293,
+                7728,
+                13,
+                51556
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2348683625459671,
+            "compression_ratio": 1.582456111907959,
+            "no_speech_prob": 0.0009105968056246638
+        },
+        {
+            "id": 22,
+            "seek": 7894,
+            "start": 104.31999969482422,
+            "end": 106.9000015258789,
+            "text": " Let's inspire each other and pave the way for successful software solutions together.",
+            "tokens": [
+                51556,
+                961,
+                311,
+                15638,
+                1184,
+                661,
+                293,
+                28870,
+                264,
+                636,
+                337,
+                4406,
+                4722,
+                6547,
+                1214,
+                13,
+                51812
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2348683625459671,
+            "compression_ratio": 1.582456111907959,
+            "no_speech_prob": 0.0009105968056246638
+        },
+        {
+            "id": 23,
+            "seek": 10690,
+            "start": 107.45999908447266,
+            "end": 112.16000366210938,
+            "text": " If you have any questions as we go along, don't hesitate to raise them.",
+            "tokens": [
+                50414,
+                759,
+                291,
+                362,
+                604,
+                1651,
+                382,
+                321,
+                352,
+                2051,
+                11,
+                500,
+                380,
+                20842,
+                281,
+                5300,
+                552,
+                13,
+                50620
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2992803454399109,
+            "compression_ratio": 1.0843373537063599,
+            "no_speech_prob": 0.01280706375837326
+        },
+        {
+            "id": 24,
+            "seek": 10690,
+            "start": 112.16000366210938,
+            "end": 112.63999938964844,
+            "text": " Let's get started.",
+            "tokens": [
+                50620,
+                961,
+                311,
+                483,
+                1409,
+                13,
+                50656
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.2992803454399109,
+            "compression_ratio": 1.0843373537063599,
+            "no_speech_prob": 0.01280706375837326
+        }
+    ],
+    "words": [
+        {
+            "word": "Hello",
+            "start": 0.0,
+            "end": 0.3400000035762787
+        },
+        {
+            "word": "everyone",
+            "start": 0.3400000035762787,
+            "end": 0.800000011920929
+        },
+        {
+            "word": "and",
+            "start": 0.800000011920929,
+            "end": 1.0
+        },
+        {
+            "word": "welcome",
+            "start": 1.0,
+            "end": 1.2200000286102295
+        },
+        {
+            "word": "to",
+            "start": 1.2200000286102295,
+            "end": 1.440000057220459
+        },
+        {
+            "word": "our",
+            "start": 1.440000057220459,
+            "end": 1.6399999856948853
+        },
+        {
+            "word": "course",
+            "start": 1.6399999856948853,
+            "end": 1.9199999570846558
+        },
+        {
+            "word": "on",
+            "start": 1.9199999570846558,
+            "end": 2.240000009536743
+        },
+        {
+            "word": "User",
+            "start": 2.240000009536743,
+            "end": 2.440000057220459
+        },
+        {
+            "word": "Requirements",
+            "start": 2.440000057220459,
+            "end": 3.0199999809265137
+        },
+        {
+            "word": "Analysis",
+            "start": 3.0199999809265137,
+            "end": 3.5399999618530273
+        },
+        {
+            "word": "I'm",
+            "start": 4.179999828338623,
+            "end": 4.440000057220459
+        },
+        {
+            "word": "so",
+            "start": 4.440000057220459,
+            "end": 4.820000171661377
+        },
+        {
+            "word": "glad",
+            "start": 4.820000171661377,
+            "end": 4.840000152587891
+        },
+        {
+            "word": "to",
+            "start": 4.840000152587891,
+            "end": 5.119999885559082
+        },
+        {
+            "word": "see",
+            "start": 5.119999885559082,
+            "end": 5.21999979019165
+        },
+        {
+            "word": "you",
+            "start": 5.21999979019165,
+            "end": 5.380000114440918
+        },
+        {
+            "word": "all",
+            "start": 5.380000114440918,
+            "end": 5.619999885559082
+        },
+        {
+            "word": "here",
+            "start": 5.619999885559082,
+            "end": 5.800000190734863
+        },
+        {
+            "word": "today",
+            "start": 5.800000190734863,
+            "end": 6.139999866485596
+        },
+        {
+            "word": "as",
+            "start": 6.139999866485596,
+            "end": 6.480000019073486
+        },
+        {
+            "word": "we",
+            "start": 6.480000019073486,
+            "end": 6.960000038146973
+        },
+        {
+            "word": "embark",
+            "start": 6.960000038146973,
+            "end": 6.960000038146973
+        },
+        {
+            "word": "on",
+            "start": 6.960000038146973,
+            "end": 7.199999809265137
+        },
+        {
+            "word": "an",
+            "start": 7.199999809265137,
+            "end": 7.519999980926514
+        },
+        {
+            "word": "exciting",
+            "start": 7.519999980926514,
+            "end": 7.860000133514404
+        },
+        {
+            "word": "journey",
+            "start": 7.860000133514404,
+            "end": 8.180000305175781
+        },
+        {
+            "word": "to",
+            "start": 8.180000305175781,
+            "end": 8.84000015258789
+        },
+        {
+            "word": "explore",
+            "start": 8.84000015258789,
+            "end": 8.84000015258789
+        },
+        {
+            "word": "the",
+            "start": 8.84000015258789,
+            "end": 9.260000228881836
+        },
+        {
+            "word": "essential",
+            "start": 9.260000228881836,
+            "end": 9.680000305175781
+        },
+        {
+            "word": "foundations",
+            "start": 9.680000305175781,
+            "end": 10.239999771118164
+        },
+        {
+            "word": "of",
+            "start": 10.239999771118164,
+            "end": 10.800000190734863
+        },
+        {
+            "word": "effective",
+            "start": 10.800000190734863,
+            "end": 11.239999771118164
+        },
+        {
+            "word": "software",
+            "start": 11.239999771118164,
+            "end": 11.819999694824219
+        },
+        {
+            "word": "engineering",
+            "start": 11.819999694824219,
+            "end": 12.34000015258789
+        },
+        {
+            "word": "In",
+            "start": 12.680000305175781,
+            "end": 13.640000343322754
+        },
+        {
+            "word": "this",
+            "start": 13.640000343322754,
+            "end": 13.899999618530273
+        },
+        {
+            "word": "course",
+            "start": 13.899999618530273,
+            "end": 14.220000267028809
+        },
+        {
+            "word": "we",
+            "start": 14.479999542236328,
+            "end": 14.600000381469727
+        },
+        {
+            "word": "will",
+            "start": 14.600000381469727,
+            "end": 15.039999961853027
+        },
+        {
+            "word": "delve",
+            "start": 15.039999961853027,
+            "end": 15.039999961853027
+        },
+        {
+            "word": "into",
+            "start": 15.039999961853027,
+            "end": 15.279999732971191
+        },
+        {
+            "word": "the",
+            "start": 15.279999732971191,
+            "end": 15.859999656677246
+        },
+        {
+            "word": "critical",
+            "start": 15.859999656677246,
+            "end": 15.859999656677246
+        },
+        {
+            "word": "aspects",
+            "start": 15.859999656677246,
+            "end": 16.3799991607666
+        },
+        {
+            "word": "of",
+            "start": 16.3799991607666,
+            "end": 16.780000686645508
+        },
+        {
+            "word": "understanding",
+            "start": 16.780000686645508,
+            "end": 17.18000030517578
+        },
+        {
+            "word": "user",
+            "start": 17.18000030517578,
+            "end": 17.600000381469727
+        },
+        {
+            "word": "requirements",
+            "start": 17.600000381469727,
+            "end": 18.1200008392334
+        },
+        {
+            "word": "We",
+            "start": 19.059999465942383,
+            "end": 19.15999984741211
+        },
+        {
+            "word": "will",
+            "start": 19.15999984741211,
+            "end": 19.440000534057617
+        },
+        {
+            "word": "uncover",
+            "start": 19.440000534057617,
+            "end": 19.65999984741211
+        },
+        {
+            "word": "the",
+            "start": 19.65999984741211,
+            "end": 20.020000457763672
+        },
+        {
+            "word": "different",
+            "start": 20.020000457763672,
+            "end": 20.299999237060547
+        },
+        {
+            "word": "methods",
+            "start": 20.299999237060547,
+            "end": 20.700000762939453
+        },
+        {
+            "word": "particularly",
+            "start": 21.360000610351562,
+            "end": 21.6200008392334
+        },
+        {
+            "word": "focusing",
+            "start": 21.6200008392334,
+            "end": 22.1200008392334
+        },
+        {
+            "word": "on",
+            "start": 22.1200008392334,
+            "end": 22.520000457763672
+        },
+        {
+            "word": "use",
+            "start": 22.520000457763672,
+            "end": 22.719999313354492
+        },
+        {
+            "word": "cases",
+            "start": 22.719999313354492,
+            "end": 23.040000915527344
+        },
+        {
+            "word": "and",
+            "start": 23.040000915527344,
+            "end": 23.440000534057617
+        },
+        {
+            "word": "user",
+            "start": 23.440000534057617,
+            "end": 23.68000030517578
+        },
+        {
+            "word": "stories",
+            "start": 23.68000030517578,
+            "end": 24.18000030517578
+        },
+        {
+            "word": "which",
+            "start": 24.559999465942383,
+            "end": 25.520000457763672
+        },
+        {
+            "word": "are",
+            "start": 25.520000457763672,
+            "end": 25.68000030517578
+        },
+        {
+            "word": "pivotal",
+            "start": 25.68000030517578,
+            "end": 25.979999542236328
+        },
+        {
+            "word": "in",
+            "start": 25.979999542236328,
+            "end": 26.440000534057617
+        },
+        {
+            "word": "identifying",
+            "start": 26.440000534057617,
+            "end": 26.920000076293945
+        },
+        {
+            "word": "what",
+            "start": 26.920000076293945,
+            "end": 27.31999969482422
+        },
+        {
+            "word": "users",
+            "start": 27.31999969482422,
+            "end": 27.559999465942383
+        },
+        {
+            "word": "need",
+            "start": 27.559999465942383,
+            "end": 27.8799991607666
+        },
+        {
+            "word": "to",
+            "start": 27.8799991607666,
+            "end": 28.420000076293945
+        },
+        {
+            "word": "achieve",
+            "start": 28.420000076293945,
+            "end": 28.440000534057617
+        },
+        {
+            "word": "with",
+            "start": 28.440000534057617,
+            "end": 28.6200008392334
+        },
+        {
+            "word": "a",
+            "start": 28.6200008392334,
+            "end": 29.1200008392334
+        },
+        {
+            "word": "system",
+            "start": 29.1200008392334,
+            "end": 29.1200008392334
+        },
+        {
+            "word": "These",
+            "start": 30.799999237060547,
+            "end": 30.959999084472656
+        },
+        {
+            "word": "concepts",
+            "start": 30.959999084472656,
+            "end": 31.420000076293945
+        },
+        {
+            "word": "will",
+            "start": 31.420000076293945,
+            "end": 31.639999389648438
+        },
+        {
+            "word": "not",
+            "start": 31.639999389648438,
+            "end": 31.81999969482422
+        },
+        {
+            "word": "only",
+            "start": 31.81999969482422,
+            "end": 32.060001373291016
+        },
+        {
+            "word": "help",
+            "start": 32.060001373291016,
+            "end": 32.2400016784668
+        },
+        {
+            "word": "you",
+            "start": 32.2400016784668,
+            "end": 32.81999969482422
+        },
+        {
+            "word": "satisfy",
+            "start": 32.81999969482422,
+            "end": 32.81999969482422
+        },
+        {
+            "word": "business",
+            "start": 32.81999969482422,
+            "end": 33.2400016784668
+        },
+        {
+            "word": "requirements",
+            "start": 33.2400016784668,
+            "end": 33.84000015258789
+        },
+        {
+            "word": "but",
+            "start": 34.29999923706055,
+            "end": 34.439998626708984
+        },
+        {
+            "word": "will",
+            "start": 34.439998626708984,
+            "end": 34.58000183105469
+        },
+        {
+            "word": "also",
+            "start": 34.58000183105469,
+            "end": 35.18000030517578
+        },
+        {
+            "word": "enhance",
+            "start": 35.18000030517578,
+            "end": 35.20000076293945
+        },
+        {
+            "word": "the",
+            "start": 35.20000076293945,
+            "end": 35.63999938964844
+        },
+        {
+            "word": "quality",
+            "start": 35.63999938964844,
+            "end": 35.779998779296875
+        },
+        {
+            "word": "and",
+            "start": 35.779998779296875,
+            "end": 36.08000183105469
+        },
+        {
+            "word": "user",
+            "start": 36.08000183105469,
+            "end": 36.29999923706055
+        },
+        {
+            "word": "satisfaction",
+            "start": 36.29999923706055,
+            "end": 36.939998626708984
+        },
+        {
+            "word": "of",
+            "start": 36.939998626708984,
+            "end": 37.52000045776367
+        },
+        {
+            "word": "the",
+            "start": 37.52000045776367,
+            "end": 37.7599983215332
+        },
+        {
+            "word": "software",
+            "start": 37.7599983215332,
+            "end": 38.08000183105469
+        },
+        {
+            "word": "products",
+            "start": 38.08000183105469,
+            "end": 38.439998626708984
+        },
+        {
+            "word": "you",
+            "start": 38.439998626708984,
+            "end": 39.099998474121094
+        },
+        {
+            "word": "develop",
+            "start": 39.099998474121094,
+            "end": 39.099998474121094
+        },
+        {
+            "word": "Our",
+            "start": 40.119998931884766,
+            "end": 41.13999938964844
+        },
+        {
+            "word": "primary",
+            "start": 41.13999938964844,
+            "end": 41.540000915527344
+        },
+        {
+            "word": "learning",
+            "start": 41.540000915527344,
+            "end": 41.880001068115234
+        },
+        {
+            "word": "objectives",
+            "start": 41.880001068115234,
+            "end": 42.20000076293945
+        },
+        {
+            "word": "for",
+            "start": 42.20000076293945,
+            "end": 42.52000045776367
+        },
+        {
+            "word": "today's",
+            "start": 42.52000045776367,
+            "end": 42.84000015258789
+        },
+        {
+            "word": "lecture",
+            "start": 42.84000015258789,
+            "end": 43.08000183105469
+        },
+        {
+            "word": "are",
+            "start": 43.08000183105469,
+            "end": 43.36000061035156
+        },
+        {
+            "word": "threefold",
+            "start": 43.36000061035156,
+            "end": 43.79999923706055
+        },
+        {
+            "word": "First",
+            "start": 44.619998931884766,
+            "end": 45.02000045776367
+        },
+        {
+            "word": "we",
+            "start": 45.18000030517578,
+            "end": 45.439998626708984
+        },
+        {
+            "word": "will",
+            "start": 45.439998626708984,
+            "end": 45.619998931884766
+        },
+        {
+            "word": "learn",
+            "start": 45.619998931884766,
+            "end": 45.7599983215332
+        },
+        {
+            "word": "how",
+            "start": 45.7599983215332,
+            "end": 45.959999084472656
+        },
+        {
+            "word": "to",
+            "start": 45.959999084472656,
+            "end": 46.47999954223633
+        },
+        {
+            "word": "define",
+            "start": 46.47999954223633,
+            "end": 46.47999954223633
+        },
+        {
+            "word": "and",
+            "start": 46.47999954223633,
+            "end": 46.79999923706055
+        },
+        {
+            "word": "articulate",
+            "start": 46.79999923706055,
+            "end": 47.15999984741211
+        },
+        {
+            "word": "the",
+            "start": 47.15999984741211,
+            "end": 47.81999969482422
+        },
+        {
+            "word": "crucial",
+            "start": 47.81999969482422,
+            "end": 47.81999969482422
+        },
+        {
+            "word": "user",
+            "start": 47.81999969482422,
+            "end": 48.220001220703125
+        },
+        {
+            "word": "needs",
+            "start": 48.220001220703125,
+            "end": 48.52000045776367
+        },
+        {
+            "word": "that",
+            "start": 48.52000045776367,
+            "end": 48.81999969482422
+        },
+        {
+            "word": "drive",
+            "start": 48.81999969482422,
+            "end": 49.08000183105469
+        },
+        {
+            "word": "software",
+            "start": 49.08000183105469,
+            "end": 49.5
+        },
+        {
+            "word": "requirements",
+            "start": 49.5,
+            "end": 49.97999954223633
+        },
+        {
+            "word": "Second",
+            "start": 50.599998474121094,
+            "end": 51.31999969482422
+        },
+        {
+            "word": "we",
+            "start": 51.52000045776367,
+            "end": 51.7400016784668
+        },
+        {
+            "word": "will",
+            "start": 51.7400016784668,
+            "end": 51.959999084472656
+        },
+        {
+            "word": "explore",
+            "start": 51.959999084472656,
+            "end": 52.18000030517578
+        },
+        {
+            "word": "the",
+            "start": 52.18000030517578,
+            "end": 52.400001525878906
+        },
+        {
+            "word": "practical",
+            "start": 52.400001525878906,
+            "end": 52.86000061035156
+        },
+        {
+            "word": "techniques",
+            "start": 52.86000061035156,
+            "end": 53.31999969482422
+        },
+        {
+            "word": "for",
+            "start": 53.31999969482422,
+            "end": 53.70000076293945
+        },
+        {
+            "word": "capturing",
+            "start": 53.70000076293945,
+            "end": 53.959999084472656
+        },
+        {
+            "word": "those",
+            "start": 53.959999084472656,
+            "end": 54.47999954223633
+        },
+        {
+            "word": "needs",
+            "start": 54.47999954223633,
+            "end": 54.619998931884766
+        },
+        {
+            "word": "through",
+            "start": 54.619998931884766,
+            "end": 54.97999954223633
+        },
+        {
+            "word": "use",
+            "start": 54.97999954223633,
+            "end": 55.29999923706055
+        },
+        {
+            "word": "cases",
+            "start": 55.29999923706055,
+            "end": 55.68000030517578
+        },
+        {
+            "word": "and",
+            "start": 55.68000030517578,
+            "end": 56.02000045776367
+        },
+        {
+            "word": "user",
+            "start": 56.02000045776367,
+            "end": 56.279998779296875
+        },
+        {
+            "word": "stories",
+            "start": 56.279998779296875,
+            "end": 56.720001220703125
+        },
+        {
+            "word": "Finally",
+            "start": 57.880001068115234,
+            "end": 58.29999923706055
+        },
+        {
+            "word": "we",
+            "start": 58.400001525878906,
+            "end": 58.70000076293945
+        },
+        {
+            "word": "will",
+            "start": 58.70000076293945,
+            "end": 58.97999954223633
+        },
+        {
+            "word": "discuss",
+            "start": 58.97999954223633,
+            "end": 59.220001220703125
+        },
+        {
+            "word": "how",
+            "start": 59.220001220703125,
+            "end": 59.459999084472656
+        },
+        {
+            "word": "effective",
+            "start": 59.459999084472656,
+            "end": 59.84000015258789
+        },
+        {
+            "word": "requirements",
+            "start": 59.84000015258789,
+            "end": 60.380001068115234
+        },
+        {
+            "word": "gathering",
+            "start": 60.380001068115234,
+            "end": 60.70000076293945
+        },
+        {
+            "word": "can",
+            "start": 60.70000076293945,
+            "end": 61.0
+        },
+        {
+            "word": "lead",
+            "start": 61.0,
+            "end": 61.119998931884766
+        },
+        {
+            "word": "to",
+            "start": 61.119998931884766,
+            "end": 61.380001068115234
+        },
+        {
+            "word": "successful",
+            "start": 61.380001068115234,
+            "end": 61.84000015258789
+        },
+        {
+            "word": "project",
+            "start": 61.84000015258789,
+            "end": 62.439998626708984
+        },
+        {
+            "word": "outcomes",
+            "start": 62.439998626708984,
+            "end": 62.84000015258789
+        },
+        {
+            "word": "and",
+            "start": 62.84000015258789,
+            "end": 63.380001068115234
+        },
+        {
+            "word": "overall",
+            "start": 63.380001068115234,
+            "end": 63.79999923706055
+        },
+        {
+            "word": "user",
+            "start": 63.79999923706055,
+            "end": 64.16000366210938
+        },
+        {
+            "word": "satisfaction",
+            "start": 64.16000366210938,
+            "end": 64.83999633789062
+        },
+        {
+            "word": "One",
+            "start": 65.95999908447266,
+            "end": 66.4800033569336
+        },
+        {
+            "word": "particularly",
+            "start": 66.4800033569336,
+            "end": 67.18000030517578
+        },
+        {
+            "word": "interesting",
+            "start": 67.18000030517578,
+            "end": 67.63999938964844
+        },
+        {
+            "word": "aspect",
+            "start": 67.63999938964844,
+            "end": 68.0999984741211
+        },
+        {
+            "word": "we'll",
+            "start": 68.0999984741211,
+            "end": 68.27999877929688
+        },
+        {
+            "word": "be",
+            "start": 68.27999877929688,
+            "end": 68.73999786376953
+        },
+        {
+            "word": "addressing",
+            "start": 68.73999786376953,
+            "end": 68.73999786376953
+        },
+        {
+            "word": "is",
+            "start": 68.73999786376953,
+            "end": 69.04000091552734
+        },
+        {
+            "word": "how",
+            "start": 69.04000091552734,
+            "end": 69.31999969482422
+        },
+        {
+            "word": "accurate",
+            "start": 69.31999969482422,
+            "end": 69.77999877929688
+        },
+        {
+            "word": "and",
+            "start": 69.77999877929688,
+            "end": 70.26000213623047
+        },
+        {
+            "word": "well",
+            "start": 70.26000213623047,
+            "end": 70.5999984741211
+        },
+        {
+            "word": "defined",
+            "start": 70.5999984741211,
+            "end": 70.91999816894531
+        },
+        {
+            "word": "requirements",
+            "start": 70.91999816894531,
+            "end": 71.62000274658203
+        },
+        {
+            "word": "can",
+            "start": 71.62000274658203,
+            "end": 72.13999938964844
+        },
+        {
+            "word": "significantly",
+            "start": 72.13999938964844,
+            "end": 72.83999633789062
+        },
+        {
+            "word": "reduce",
+            "start": 72.83999633789062,
+            "end": 73.30000305175781
+        },
+        {
+            "word": "the",
+            "start": 73.30000305175781,
+            "end": 74.0
+        },
+        {
+            "word": "risks",
+            "start": 74.0,
+            "end": 74.0
+        },
+        {
+            "word": "of",
+            "start": 74.0,
+            "end": 74.5
+        },
+        {
+            "word": "project",
+            "start": 74.5,
+            "end": 74.86000061035156
+        },
+        {
+            "word": "failure",
+            "start": 74.86000061035156,
+            "end": 75.23999786376953
+        },
+        {
+            "word": "This",
+            "start": 75.36000061035156,
+            "end": 75.58000183105469
+        },
+        {
+            "word": "course",
+            "start": 75.58000183105469,
+            "end": 75.80000305175781
+        },
+        {
+            "word": "not",
+            "start": 75.80000305175781,
+            "end": 76.05999755859375
+        },
+        {
+            "word": "only",
+            "start": 76.05999755859375,
+            "end": 76.27999877929688
+        },
+        {
+            "word": "prepares",
+            "start": 76.27999877929688,
+            "end": 76.55999755859375
+        },
+        {
+            "word": "you",
+            "start": 76.55999755859375,
+            "end": 76.77999877929688
+        },
+        {
+            "word": "for",
+            "start": 76.77999877929688,
+            "end": 76.9000015258789
+        },
+        {
+            "word": "your",
+            "start": 76.9000015258789,
+            "end": 77.08000183105469
+        },
+        {
+            "word": "future",
+            "start": 77.08000183105469,
+            "end": 77.4000015258789
+        },
+        {
+            "word": "engagements",
+            "start": 77.4000015258789,
+            "end": 77.81999969482422
+        },
+        {
+            "word": "in",
+            "start": 77.81999969482422,
+            "end": 78.16000366210938
+        },
+        {
+            "word": "software",
+            "start": 78.16000366210938,
+            "end": 78.5
+        },
+        {
+            "word": "engineering",
+            "start": 78.5,
+            "end": 78.94000244140625
+        },
+        {
+            "word": "but",
+            "start": 79.05999755859375,
+            "end": 79.68000030517578
+        },
+        {
+            "word": "also",
+            "start": 79.68000030517578,
+            "end": 80.0999984741211
+        },
+        {
+            "word": "equips",
+            "start": 80.0999984741211,
+            "end": 80.36000061035156
+        },
+        {
+            "word": "you",
+            "start": 80.36000061035156,
+            "end": 80.54000091552734
+        },
+        {
+            "word": "with",
+            "start": 80.54000091552734,
+            "end": 80.76000213623047
+        },
+        {
+            "word": "vital",
+            "start": 80.76000213623047,
+            "end": 81.04000091552734
+        },
+        {
+            "word": "skills",
+            "start": 81.04000091552734,
+            "end": 81.44000244140625
+        },
+        {
+            "word": "that",
+            "start": 81.44000244140625,
+            "end": 81.68000030517578
+        },
+        {
+            "word": "are",
+            "start": 81.68000030517578,
+            "end": 81.87999725341797
+        },
+        {
+            "word": "highly",
+            "start": 81.87999725341797,
+            "end": 82.18000030517578
+        },
+        {
+            "word": "sought",
+            "start": 82.18000030517578,
+            "end": 82.4000015258789
+        },
+        {
+            "word": "after",
+            "start": 82.4000015258789,
+            "end": 82.76000213623047
+        },
+        {
+            "word": "in",
+            "start": 82.76000213623047,
+            "end": 82.95999908447266
+        },
+        {
+            "word": "today's",
+            "start": 82.95999908447266,
+            "end": 83.31999969482422
+        },
+        {
+            "word": "job",
+            "start": 83.31999969482422,
+            "end": 83.5999984741211
+        },
+        {
+            "word": "market",
+            "start": 83.5999984741211,
+            "end": 83.87999725341797
+        },
+        {
+            "word": "Now",
+            "start": 85.13999938964844,
+            "end": 85.30000305175781
+        },
+        {
+            "word": "as",
+            "start": 85.30000305175781,
+            "end": 85.4800033569336
+        },
+        {
+            "word": "you",
+            "start": 85.4800033569336,
+            "end": 85.72000122070312
+        },
+        {
+            "word": "engage",
+            "start": 85.72000122070312,
+            "end": 85.94000244140625
+        },
+        {
+            "word": "with",
+            "start": 85.94000244140625,
+            "end": 86.0999984741211
+        },
+        {
+            "word": "the",
+            "start": 86.0999984741211,
+            "end": 86.63999938964844
+        },
+        {
+            "word": "material",
+            "start": 86.63999938964844,
+            "end": 86.63999938964844
+        },
+        {
+            "word": "I",
+            "start": 87.27999877929688,
+            "end": 87.4800033569336
+        },
+        {
+            "word": "encourage",
+            "start": 87.4800033569336,
+            "end": 87.72000122070312
+        },
+        {
+            "word": "you",
+            "start": 87.72000122070312,
+            "end": 87.91999816894531
+        },
+        {
+            "word": "to",
+            "start": 87.91999816894531,
+            "end": 88.12000274658203
+        },
+        {
+            "word": "think",
+            "start": 88.12000274658203,
+            "end": 88.23999786376953
+        },
+        {
+            "word": "critically",
+            "start": 88.23999786376953,
+            "end": 88.62000274658203
+        },
+        {
+            "word": "and",
+            "start": 88.62000274658203,
+            "end": 89.04000091552734
+        },
+        {
+            "word": "ask",
+            "start": 89.04000091552734,
+            "end": 89.27999877929688
+        },
+        {
+            "word": "questions",
+            "start": 89.27999877929688,
+            "end": 89.9000015258789
+        },
+        {
+            "word": "Your",
+            "start": 91.13999938964844,
+            "end": 91.27999877929688
+        },
+        {
+            "word": "participation",
+            "start": 91.27999877929688,
+            "end": 91.91999816894531
+        },
+        {
+            "word": "is",
+            "start": 91.91999816894531,
+            "end": 92.44000244140625
+        },
+        {
+            "word": "instrumental",
+            "start": 92.44000244140625,
+            "end": 92.87999725341797
+        },
+        {
+            "word": "in",
+            "start": 92.87999725341797,
+            "end": 93.63999938964844
+        },
+        {
+            "word": "creating",
+            "start": 93.63999938964844,
+            "end": 93.63999938964844
+        },
+        {
+            "word": "an",
+            "start": 93.63999938964844,
+            "end": 94.0199966430664
+        },
+        {
+            "word": "enriching",
+            "start": 94.0199966430664,
+            "end": 94.41999816894531
+        },
+        {
+            "word": "learning",
+            "start": 94.41999816894531,
+            "end": 94.73999786376953
+        },
+        {
+            "word": "environment",
+            "start": 94.73999786376953,
+            "end": 95.12000274658203
+        },
+        {
+            "word": "for",
+            "start": 95.12000274658203,
+            "end": 95.58000183105469
+        },
+        {
+            "word": "everyone",
+            "start": 95.58000183105469,
+            "end": 95.9800033569336
+        },
+        {
+            "word": "To",
+            "start": 96.66000366210938,
+            "end": 97.41999816894531
+        },
+        {
+            "word": "summarize",
+            "start": 97.41999816894531,
+            "end": 97.73999786376953
+        },
+        {
+            "word": "get",
+            "start": 98.69999694824219,
+            "end": 98.73999786376953
+        },
+        {
+            "word": "ready",
+            "start": 98.73999786376953,
+            "end": 99.0
+        },
+        {
+            "word": "to",
+            "start": 99.0,
+            "end": 99.54000091552734
+        },
+        {
+            "word": "immerse",
+            "start": 99.54000091552734,
+            "end": 99.5999984741211
+        },
+        {
+            "word": "yourself",
+            "start": 99.5999984741211,
+            "end": 100.0
+        },
+        {
+            "word": "in",
+            "start": 100.0,
+            "end": 100.22000122070312
+        },
+        {
+            "word": "the",
+            "start": 100.22000122070312,
+            "end": 100.44000244140625
+        },
+        {
+            "word": "world",
+            "start": 100.44000244140625,
+            "end": 100.63999938964844
+        },
+        {
+            "word": "of",
+            "start": 100.63999938964844,
+            "end": 100.91999816894531
+        },
+        {
+            "word": "user",
+            "start": 100.91999816894531,
+            "end": 101.18000030517578
+        },
+        {
+            "word": "needs",
+            "start": 101.18000030517578,
+            "end": 101.55999755859375
+        },
+        {
+            "word": "and",
+            "start": 101.55999755859375,
+            "end": 101.9800033569336
+        },
+        {
+            "word": "requirements",
+            "start": 101.9800033569336,
+            "end": 102.33999633789062
+        },
+        {
+            "word": "Let's",
+            "start": 102.77999877929688,
+            "end": 102.9800033569336
+        },
+        {
+            "word": "inspire",
+            "start": 102.9800033569336,
+            "end": 103.26000213623047
+        },
+        {
+            "word": "each",
+            "start": 103.26000213623047,
+            "end": 103.55999755859375
+        },
+        {
+            "word": "other",
+            "start": 103.55999755859375,
+            "end": 103.73999786376953
+        },
+        {
+            "word": "and",
+            "start": 103.73999786376953,
+            "end": 104.16000366210938
+        },
+        {
+            "word": "pave",
+            "start": 104.16000366210938,
+            "end": 104.16000366210938
+        },
+        {
+            "word": "the",
+            "start": 104.16000366210938,
+            "end": 104.31999969482422
+        },
+        {
+            "word": "way",
+            "start": 104.31999969482422,
+            "end": 104.58000183105469
+        },
+        {
+            "word": "for",
+            "start": 104.58000183105469,
+            "end": 104.83999633789062
+        },
+        {
+            "word": "successful",
+            "start": 104.83999633789062,
+            "end": 105.33999633789062
+        },
+        {
+            "word": "software",
+            "start": 105.33999633789062,
+            "end": 105.91999816894531
+        },
+        {
+            "word": "solutions",
+            "start": 105.91999816894531,
+            "end": 106.41999816894531
+        },
+        {
+            "word": "together",
+            "start": 106.41999816894531,
+            "end": 106.9000015258789
+        },
+        {
+            "word": "If",
+            "start": 107.45999908447266,
+            "end": 107.95999908447266
+        },
+        {
+            "word": "you",
+            "start": 107.95999908447266,
+            "end": 108.05999755859375
+        },
+        {
+            "word": "have",
+            "start": 108.05999755859375,
+            "end": 108.19999694824219
+        },
+        {
+            "word": "any",
+            "start": 108.19999694824219,
+            "end": 108.45999908447266
+        },
+        {
+            "word": "questions",
+            "start": 108.45999908447266,
+            "end": 108.80000305175781
+        },
+        {
+            "word": "as",
+            "start": 108.80000305175781,
+            "end": 109.0
+        },
+        {
+            "word": "we",
+            "start": 109.0,
+            "end": 109.18000030517578
+        },
+        {
+            "word": "go",
+            "start": 109.18000030517578,
+            "end": 109.33999633789062
+        },
+        {
+            "word": "along",
+            "start": 109.33999633789062,
+            "end": 109.63999938964844
+        },
+        {
+            "word": "don't",
+            "start": 110.04000091552734,
+            "end": 110.16000366210938
+        },
+        {
+            "word": "hesitate",
+            "start": 110.16000366210938,
+            "end": 110.4000015258789
+        },
+        {
+            "word": "to",
+            "start": 110.4000015258789,
+            "end": 110.72000122070312
+        },
+        {
+            "word": "raise",
+            "start": 110.72000122070312,
+            "end": 110.9000015258789
+        },
+        {
+            "word": "them",
+            "start": 110.9000015258789,
+            "end": 111.31999969482422
+        },
+        {
+            "word": "Let's",
+            "start": 111.81999969482422,
+            "end": 112.16000366210938
+        },
+        {
+            "word": "get",
+            "start": 112.16000366210938,
+            "end": 112.36000061035156
+        },
+        {
+            "word": "started",
+            "start": 112.36000061035156,
+            "end": 112.63999938964844
+        }
+    ]
+}
