@@ -94,7 +94,7 @@
         let video; // Video element
     
         // New function to load audio from local JSON file
-        async function loadAudioFromLocal(file) {
+        async function loadAudioFromLocal() {
             try {
                 const nodeJSON = document.getElementById('json');
                 nodeJSON.value = "Please wait...";
@@ -185,12 +185,7 @@
             const nodeLoading = document.getElementById('loading');
             try {
                 // Fetch the transcript JSON automatically when the head is loading
-                const transcript = await loadTranscriptFile();
-
-                // Process the transcript after loading it
-                if (transcript) {
-                    loadAudioFromLocal(transcript);
-                }
+                await loadAudioFromLocal();
 
 
                 await head.showAvatar( {
